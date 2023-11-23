@@ -164,7 +164,7 @@ export default async function Home() {
   const question = await fetchQuintion();
   const questionData = question?.results || [];
   const news = await fetchNews();
-  const newsData = news?.results || [];
+  const newsData = news?.results.slice(0, 3) || [];
 
   return (
     <div>
@@ -256,7 +256,7 @@ export default async function Home() {
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s Lorem Ipsum is simply
-                  dummys{' '}
+                  dummys
                 </p>
               </div>
               <div className={s.blog_Card}>
