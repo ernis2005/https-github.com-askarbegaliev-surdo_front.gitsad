@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './page.module.scss';
+import Link from 'next/link';
 export const metadata = {
   title: 'Контакты',
   description: '',
@@ -37,7 +38,14 @@ function ContactPage() {
           <div className={s.wrapper}>
             <div className={s.card}>
               <h5>Адрес:</h5>
-              <p>720017, г. Бишкек, ул. Боконбаева, 191;</p>
+              <p>
+                <Link
+                  target="_blank"
+                  href={'https://maps.app.goo.gl/nAVBSeMUmPD457Sv7'}
+                >
+                  720017, г. Бишкек, ул. Боконбаева, 191;
+                </Link>
+              </p>
             </div>
             <div className={s.card}>
               <h5>Режим работы:</h5>
@@ -45,15 +53,26 @@ function ContactPage() {
             </div>
             <div className={s.card}>
               <h5>Телефон:</h5>
-              <p>+996 (312) 35 33 81; +996 (312) 35 33 83;</p>
+              <p>
+                <Link className="mr-5" href={'tel:+996312353381'}>
+                  +996 (312) 35 33 81;
+                </Link>
+                <Link href={'tel:+996312353383'}>+996 (312) 35 33 83;</Link>
+              </p>
             </div>
             <div className={s.card}>
               <h5>Факс:</h5>
-              <p>+996 (312) 35 33 73;</p>
+              <p>
+                <Link href={'tel:+996312353373'}>+996 (312) 35 33 73;</Link>
+              </p>
             </div>
             <div className={s.card}>
               <h5>E-mail:</h5>
-              <p>erc@elcat.kg</p>
+              <p>
+                <Link target="_blank" href="mailto:erc@elcat.kg">
+                  erc@elcat.kg
+                </Link>
+              </p>
             </div>
           </div>
         </div>

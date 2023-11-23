@@ -11,6 +11,8 @@ import Instagram from '../svg/Instagram'
 import Linkidin from '../svg/Linkidin'
 import Telegram from '../svg/Telegram'
 import Whatssap from '../svg/Whatssap'
+import { MdOutlineEmail } from "react-icons/md";
+
 
 export default function Footer() {
   return (
@@ -32,7 +34,7 @@ export default function Footer() {
           </div>
           <div className={s.footer_rigth}>
             <div>
-              {/* <h3>Quick Links</h3> */}
+              <h3>Quick Links</h3>
               <ul>
                 <li><Link className={s.link} href="/">Главная</Link></li>
                 <li>
@@ -56,29 +58,36 @@ export default function Footer() {
                   <ul>
                     <li>
                       <Email />
-                      <Link className={s.link} href="#">@gmail.com</Link>
+                      <Link className={s.link} target="_blank" href="mailto:erc@elcat.kg">
+                        erc@elcat.kg
+                      </Link>
                     </li>
                     <li>
                       <Location />
-                      <Link className={s.link} href="#">location</Link></li>
+                      <Link className={s.link}
+                        target="_blank"
+                        href={'https://maps.app.goo.gl/nAVBSeMUmPD457Sv7'}>
+                        location
+                      </Link>
+                    </li>
                   </ul>
                 </div>
                 <div className={s.footer_item}>
                   <h3>Мы в соц.сетях</h3>
                   <div className={s.footer_link}>
-                    <Link href="#">
+                    <Link target="_blank" href="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.kosg.kg%252Fkontakty%252F%26t%3D-%26quote&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=ru_RU">
                       <Facebook />
                     </Link>
-                    <Link href="#">
+                    <Link target="_blank" href="#">
                       <Instagram />
                     </Link>
-                    <Link href="#">
-                      <Linkidin />
+                    <Link target="_blank" href="">
+                      <MdOutlineEmail className={'w-[32px] h-[32px]'} />
                     </Link>
-                    <Link href="#">
+                    <Link target="_blank" href="https://telegram.me/share/url?url=http%3A%2F%2Fwww.kosg.kg%2Fkontakty%2F&text=-">
                       <Telegram />
                     </Link>
-                    <Link href="#">
+                    <Link target="_blank" href="https://api.whatsapp.com/send?text=-%20http%3A%2F%2Fwww.kosg.kg%2Fkontakty%2F">
                       <Whatssap />
                     </Link>
                   </div>
@@ -87,11 +96,11 @@ export default function Footer() {
               <div className={s.footer_map}>
                 <h3>Мы на карте</h3>
                 <div className={s.map_link}>
-                  <a
-                    href="https://www.google.com/maps/@42.8673036,74.5919356,21z?hl=ru&entry=ttu"
-                  >
-                    Посмотреть на 2GIS
-                  </a>
+                  <Link
+                    target="_blank"
+                    href={'https://maps.app.goo.gl/nAVBSeMUmPD457Sv7'}>
+                    Посмотреть на карты
+                  </Link>
                   <iframe
                     className={s.map}
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.6339980505554!2d74.58391327603604!3d42.859460803404865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec99f10d3e9f1%3A0xd8ae1cafa61a6ea6!2z0KTQuNC70L7RgNC90Y7QvNC-0L3QuNGP!5e0!3m2!1sru!2skg!4v1696498751488!5m2!1sru!2skg"
@@ -127,11 +136,13 @@ export default function Footer() {
           <div className={s.footer_map}>
             <h3>Мы на карте</h3>
             <div className={s.map_link}>
-              <a
-                href="https://www.google.com/maps/@42.8673036,74.5919356,21z?hl=ru&entry=ttu"
+              <Link
+                target="_blank"
+                href={'https://maps.app.goo.gl/nAVBSeMUmPD457Sv7'}
+
               >
-                Посмотреть на 2GIS
-              </a>
+                Посмотреть на карты
+              </Link>
               <iframe
                 className={s.map}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.6339980505554!2d74.58391327603604!3d42.859460803404865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec99f10d3e9f1%3A0xd8ae1cafa61a6ea6!2z0KTQuNC70L7RgNC90Y7QvNC-0L3QuNGP!5e0!3m2!1sru!2skg!4v1696498751488!5m2!1sru!2skg"
