@@ -16,7 +16,6 @@ export default function Header() {
   const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
   const { modal } = useSelector((state) => state.modal);
-
   const { isUser, error, userInfo } = useSelector((state) => state.auth);
 
   const getuser = () => {
@@ -78,7 +77,11 @@ export default function Header() {
                 </li>
               </ul>
               {userInfo ? (
-                <Link className={s.profil} href="/page/profil">
+                <Link
+                  onClick={() => setToggle(false)}
+                  className={s.profil}
+                  href="/page/profil"
+                >
                   <Image
                     width={70}
                     height={70}

@@ -14,7 +14,7 @@
     }
     p {
       color: var(--dark, #161616);
-      font-family: Ubuntu-Medium;
+      font-family: 'Ubuntu-Medium';
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -33,24 +33,6 @@
       }
     }
   }
-
-  // .accordion_title {
-  //   background: #2d2d2d;
-  //   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.07);
-  //   padding: 20px;
-  //   p {
-  //     color: var(--white, #fff);
-  //     font-family: Ubuntu;
-  //     font-size: 20px;
-  //     font-style: normal;
-  //     font-weight: 400;
-  //     line-height: normal;
-  //     opacity: 0.7;
-  //     @media screen and (max-width: 600px) {
-  //       font-size: 13px;
-  //     }
-  //   }
-  // }
 }
 
 .open {
@@ -66,7 +48,7 @@
     cursor: pointer;
     p {
       color: #fff;
-      font-family: Ubuntu-Medium;
+      font-family: 'Ubuntu-Medium';
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -93,7 +75,7 @@
     }
     p {
       color: #fff;
-      font-family: Ubuntu;
+      font-family: 'Ubuntu-Medium';
       font-size: 20px;
       font-style: normal;
       font-weight: 400;

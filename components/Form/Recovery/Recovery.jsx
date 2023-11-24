@@ -23,8 +23,6 @@ export default function Recovery() {
     dispatch(sendCodeFitch(data));
   };
 
-
-
   return (
     <>
       <div className={s.recovery}>
@@ -39,6 +37,7 @@ export default function Recovery() {
           <div className={s.wrapper}>
             <label htmlFor="tel">Номер телефона</label>
             <InputMask
+              type="tel"
               className={s.tel}
               {...register('phone', {
                 required: 'Поле обязателно к заполнина',

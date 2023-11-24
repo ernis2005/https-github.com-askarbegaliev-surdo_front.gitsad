@@ -60,6 +60,7 @@ export default function Register() {
           <div className={s.wrapper}>
             <label htmlFor="tel">Номер телефона</label>
             <InputMask
+              type="tel"
               {...register('phone', {
                 required: 'Поле обязателно к заполнина',
               })}
