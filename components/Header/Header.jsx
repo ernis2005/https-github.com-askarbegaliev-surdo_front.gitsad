@@ -16,7 +16,6 @@ export default function Header() {
   const [toggle, setToggle] = useState(false);
   const dispatch = useDispatch();
   const { modal } = useSelector((state) => state.modal);
-  ///test
   const { isUser, error, userInfo } = useSelector((state) => state.auth);
 
   const getuser = () => {
