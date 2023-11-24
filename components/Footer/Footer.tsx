@@ -7,8 +7,6 @@ import Link from 'next/link'
 import Email from '../svg/Email'
 import Location from '../svg/Location'
 import Facebook from '../svg/Facebook'
-import Instagram from '../svg/Instagram'
-import Linkidin from '../svg/Linkidin'
 import Telegram from '../svg/Telegram'
 import Whatssap from '../svg/Whatssap'
 import { MdOutlineEmail } from "react-icons/md";
@@ -78,10 +76,7 @@ export default function Footer() {
                     <Link target="_blank" href="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.kosg.kg%252Fkontakty%252F%26t%3D-%26quote&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=ru_RU">
                       <Facebook />
                     </Link>
-                    <Link target="_blank" href="#">
-                      <Instagram />
-                    </Link>
-                    <Link target="_blank" href="">
+                    <Link target="_blank" href="mailto:erc@elcat.kg">
                       <MdOutlineEmail className={'w-[32px] h-[32px]'} />
                     </Link>
                     <Link target="_blank" href="https://telegram.me/share/url?url=http%3A%2F%2Fwww.kosg.kg%2Fkontakty%2F&text=-">
@@ -116,19 +111,16 @@ export default function Footer() {
           <div className={s.footer_item}>
             <h3>Мы в соц.сетях</h3>
             <div className={s.footer_link}>
-              <Link href="#">
+              <Link target="_blank" href="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttp%253A%252F%252Fwww.kosg.kg%252Fkontakty%252F%26t%3D-%26quote&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=ru_RU">
                 <Facebook />
               </Link>
-              <Link href="#">
-                <Instagram />
+              <Link target="_blank" href="mailto:erc@elcat.kg">
+                <MdOutlineEmail className={'w-[34px] h-[34px]'} />
               </Link>
-              <Link href="#">
-                <Linkidin />
-              </Link>
-              <Link href="#">
+              <Link target="_blank" href="https://telegram.me/share/url?url=http%3A%2F%2Fwww.kosg.kg%2Fkontakty%2F&text=-">
                 <Telegram />
               </Link>
-              <Link href="#">
+              <Link target="_blank" href="https://api.whatsapp.com/send?text=-%20http%3A%2F%2Fwww.kosg.kg%2Fkontakty%2F">
                 <Whatssap />
               </Link>
             </div>

@@ -29,7 +29,11 @@ export default function Modal() {
   return (
     <div className={s.modal}>
       <div className={s.blog}>
-        {value === 1 || value === 2 || value === 3 ? (
+        {value === 1 ||
+        value === 2 ||
+        value === 3 ||
+        value === 7 ||
+        value === 4 ? (
           <button onClick={() => handleCloseModal()} className={s.close}>
             <RiCloseFill className={s.logo} />
           </button>

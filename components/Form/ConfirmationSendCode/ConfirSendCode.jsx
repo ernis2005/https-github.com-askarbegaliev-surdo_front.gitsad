@@ -16,7 +16,6 @@ export default function ConfirSendCode() {
     code: '',
   });
 
-
   const handleOnChange = (res) => {
     setResult((prevState) => ({
       ...prevState,
@@ -38,10 +37,9 @@ export default function ConfirSendCode() {
           <span>Потверждение номера телефона</span>
         </button>
         <p>
-          `На ваш номер 996 был отправлен код. Он нужен для потверждения вашей
-          личности`
+          `На ваш номер ${phone} был отправлен код. Он нужен для потверждения
+          вашей личности`
         </p>
-        {/* {data && <p style={{ color: 'red' }}>{data.error}</p>} */}
         <div className={s.cont}>
           <div className={s.contai}>
             <AuthCode

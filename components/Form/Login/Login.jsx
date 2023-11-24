@@ -37,6 +37,7 @@ export default function Login() {
           <div className={s.input}>
             <label htmlFor="tel">Номер телефона</label>
             <InputMask
+              type="tel"
               className={s.tel}
               {...register('login', {
                 required: 'Поле обязателно к заполнина',

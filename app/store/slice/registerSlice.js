@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { useEffect } from 'react';
 import axios from 'axios';
 import { handleTabClick } from './modalSlice';
 

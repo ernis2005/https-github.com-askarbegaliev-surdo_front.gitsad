@@ -22,14 +22,14 @@ body {
   transition: height 500ms;
 }
 @font-face {
-  font-family: 'Ubuntu-Medium';
+  font-family: '' Ubuntu-Medium '';
   src: url('/font/Ubuntu_Medium.ttf');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Ubuntu-Bold';
-  src: url('/font/Ubuntu/Ubuntu-Bold.ttf');
+  font-family: '' Ubuntu-Bold '';
+  src: url('/font/Ubuntu/'Ubuntu-Bold'.ttf');
   font-weight: 400;
   font-style: normal;
 }
@@ -38,9 +38,4 @@ body {
   src: url('/font/Copperplate-Gothic-Bold/Copperplate\ Gothic\ Bold\ Regular.ttf');
   font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'Gilroy-Medium';
-  src: url('/font/Gilroy_Medium.ttf');
 }

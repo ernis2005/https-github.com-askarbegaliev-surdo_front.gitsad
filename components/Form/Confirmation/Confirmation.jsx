@@ -59,7 +59,7 @@ export default function Confirmation() {
           <p style={{ color: 'red', textAlign: 'start' }}>{error.data.error}</p>
         )}
         <button onClick={confirmationClick} className={s.button}>
-          <span>{loading ? <Spiner /> : 'Изменить пароль'}</span>
+          <span>{loading ? <Spiner /> : 'Зарегистрироваться'}</span>
         </button>
       </div>
     </div>
