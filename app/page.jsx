@@ -317,7 +317,11 @@ export default async function Home() {
                     </div>
                   </div>
                   <div className={s.Links}>
-                    <Link className={s.Item} href="#">
+                    <Link
+                      target="_blank"
+                      className={s.Item}
+                      href="https://play.google.com/store/apps/details?id=dev.oracle.sudokg"
+                    >
                       <svg
                         className={s.logo}
                         xmlns="http://www.w3.org/2000/svg"

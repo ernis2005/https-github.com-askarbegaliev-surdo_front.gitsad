@@ -37,7 +37,6 @@ export default function Recovery() {
           <div className={s.wrapper}>
             <label htmlFor="tel">Номер телефона</label>
             <InputMask
-              type="tel"
               className={s.tel}
               {...register('phone', {
                 required: 'Поле обязателно к заполнина',
@@ -45,6 +44,9 @@ export default function Recovery() {
               mask="+996 (___) ___-___"
               placeholder="+996"
               replacement={{ _: /\d/ }}
+              formatCharacters={{
+                9: '[0-9]',
+              }}
             />
           </div>
           {errors && (

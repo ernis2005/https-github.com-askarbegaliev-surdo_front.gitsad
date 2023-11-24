@@ -37,7 +37,6 @@ export default function Login() {
           <div className={s.input}>
             <label htmlFor="tel">Номер телефона</label>
             <InputMask
-              type="tel"
               className={s.tel}
               {...register('login', {
                 required: 'Поле обязателно к заполнина',
@@ -45,6 +44,9 @@ export default function Login() {
               mask="+996 (___) ___-___"
               placeholder="+996"
               replacement={{ _: /\d/ }}
+              formatCharacters={{
+                9: '[0-9]',
+              }}
             />
             {errors && <p style={{ color: 'red' }}>{errors?.login?.message}</p>}
           </div>
