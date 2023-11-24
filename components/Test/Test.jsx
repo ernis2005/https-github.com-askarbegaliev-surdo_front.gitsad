@@ -70,15 +70,14 @@ const TestJS = () => {
   };
 
   const router = useRouter();
-
+  
   useEffect(() => {
 
     if (lastMessage !== null) {
       try {
         const data = JSON.parse(lastMessage.data)
         const type = data.type
-        // consle.log('data',data );
-   
+        
         setLastMessageData(data)
         if (type === 'calling') {
           

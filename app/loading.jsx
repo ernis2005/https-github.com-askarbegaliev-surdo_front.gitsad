@@ -17,7 +17,6 @@ const loading = () => {
                     </svg>
                     <p>КОС И КОГ</p>
                 </div>
-
                 <span className={s.loader}></span>
             </div>
         </div>

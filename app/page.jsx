@@ -59,7 +59,7 @@ const avatar = [
   },
 ];
 
-const accordion = [
+ const accordion = [
   {
     id: 1,
     title:

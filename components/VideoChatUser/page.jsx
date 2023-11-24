@@ -47,6 +47,7 @@ export const VideoChatUser = () => {
   const [Chat_id, setChat_id] = React.useState();
 
   const [isCamera, setIsCamera] = React.useState(true);
+ const [opertorData ,setOpertorData] = React.useState()
 
   const { userInfo } = useSelector((state) => state.auth);
   const [time, setTime] = React.useState(0);
@@ -80,7 +81,8 @@ export const VideoChatUser = () => {
         );
         const { token, chat_id, call_info_id, full_name } = await response.data;
         setChat_id(chat_id);
-
+        setOpertorData(response.data)
+     
         setCallid(call_info_id);
         setUserFullNameOp(full_name);
         const newRoom = await Video.connect(token, {
@@ -243,7 +245,7 @@ export const VideoChatUser = () => {
   const onRediteck = () => {
     redirect('/');
   };
-
+  console.log(opertorData,'opertorData');
   return (
     <div className={s.blockblock}>
       {redirectTest === true && <p onClick={onRediteck()}></p>}
@@ -253,15 +255,15 @@ export const VideoChatUser = () => {
           <div className={s.bloxk}>
             <span className={s.userInfo}>
               <div className={s.image}>
-                {userInfo?.image_profile !== null ? (
+                {opertorData?.image_profile !== null ? (
                   <Image
-                    src={userInfo?.image_profile}
+                    src={opertorData?.image_profile}
                     layout="fill"
                     objectFit="cover"
                   />
                 ) : null}
               </div>
-              <h2>{userInfo?.full_name}</h2>
+              <h2>{opertorData?.full_name}</h2>
             </span>
             <div className={s.buttons}>
               <button onClick={() => redirectPage()} className={s.Reject}>
