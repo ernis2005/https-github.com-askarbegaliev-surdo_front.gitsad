@@ -15,7 +15,7 @@ import { useSelector } from 'react-redux';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import { toast } from 'react-toastify';
-import { Api } from '../api';
+import { Api, WebSocketApi } from '../api';
 export const Svg = () => (
   <svg
     className="text-white"
@@ -48,7 +48,7 @@ export const VideoChatUser = () => {
   const [Chat_id, setChat_id] = React.useState();
 
   const [isCamera, setIsCamera] = React.useState(true);
- const [opertorData ,setOpertorData] = React.useState()
+  const [opertorData, setOpertorData] = React.useState()
 
   const { userInfo } = useSelector((state) => state.auth);
   const [time, setTime] = React.useState(0);
@@ -73,7 +73,7 @@ export const VideoChatUser = () => {
     const connectToRoom = async () => {
       try {
         const response = await axios.get(
-          `http://${Api}api/general/get_video_token/`,
+          `${Api}general/get_video_token/`,
           {
             headers: {
               Authorization: `Bearer ${returnFormData}`,
@@ -83,7 +83,7 @@ export const VideoChatUser = () => {
         const { token, chat_id, call_info_id, full_name } = await response.data;
         setChat_id(chat_id);
         setOpertorData(response.data)
-     
+
         setCallid(call_info_id);
         setUserFullNameOp(full_name);
         const newRoom = await Video.connect(token, {
@@ -107,7 +107,7 @@ export const VideoChatUser = () => {
   }, []);
 
   const { sendMessage, lastMessage, readyState } = useWebSocket(
-    `ws://${Api}ws/room/${Chat_id}/`,
+    `${WebSocketApi}room/${Chat_id}/`,
   );
 
   React.useEffect(() => {
@@ -246,7 +246,7 @@ export const VideoChatUser = () => {
   const onRediteck = () => {
     redirect('/');
   };
-  console.log(opertorData,'opertorData');
+  console.log(opertorData, 'opertorData');
   return (
     <div className={s.blockblock}>
       {redirectTest === true && <p onClick={onRediteck()}></p>}
@@ -258,44 +258,45 @@ export const VideoChatUser = () => {
               <div className={s.image}>
                 {opertorData?.image_profile !== null ? (
                   <Image
-                    src={opertorData?.image_profile}
+                    src={''}
+                    // src={opertorData?.image_profile}
                     layout="fill"
                     objectFit="cover"
                   />
                 ) : null}
               </div>
-            <div className={s.infoOp}>
-            <h2>{opertorData?.full_name}</h2>
-            <p>Соединение..  </p>
-            </div>
-             
+              <div className={s.infoOp}>
+                <h2>{opertorData?.full_name}</h2>
+                <p>Соединение..  </p>
+              </div>
+
             </span>
             <div className={s.buttons1}>
-            <div>
-              <button onClick={handleVideoEnabledStatus} className={s.isCamera}>
-                <div className={s.span}>
-                  {isCamera === true ? (
-                    <BsCameraVideo />
-                  ) : (
-                    <BsCameraVideoOff />
-                  )}
-                </div>
-               
-              </button>
-              <button onClick={handleAudioEnabledStatus} className={s.isCamera}>
-                <div className={s.span}>
-                  {isAudio === true ? <BiMicrophone /> : <BiMicrophoneOff />}
-                </div>
-                
-              </button>
-              <button onClick={() => handleEndCall()} className={s.isReject}>
-                <div className={s.span}>
-                  <Svg />
-                </div>
-             
-              </button>
+              <div>
+                <button onClick={handleVideoEnabledStatus} className={s.isCamera}>
+                  <div className={s.span}>
+                    {isCamera === true ? (
+                      <BsCameraVideo />
+                    ) : (
+                      <BsCameraVideoOff />
+                    )}
+                  </div>
+
+                </button>
+                <button onClick={handleAudioEnabledStatus} className={s.isCamera}>
+                  <div className={s.span}>
+                    {isAudio === true ? <BiMicrophone /> : <BiMicrophoneOff />}
+                  </div>
+
+                </button>
+                <button onClick={() => handleEndCall()} className={s.isReject}>
+                  <div className={s.span}>
+                    <Svg />
+                  </div>
+
+                </button>
+              </div>
             </div>
-          </div>
           </div>
         </div>
       )}

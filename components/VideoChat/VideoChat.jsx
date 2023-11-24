@@ -12,7 +12,7 @@ import { BiMicrophone, BiMicrophoneOff } from 'react-icons/bi';
 
 import { useScreenRecorder } from '../../hooks/useScreenRecorder';
 import { useSelector } from 'react-redux';
-import { Api } from '../api';
+import { Api, WebSocketApi } from '../api';
 
 
 export const Svg = () => (
@@ -47,7 +47,7 @@ function VideoChat({ handleEndCall, name }) {
 
   const roomName = room?.name;
   const { sendMessage, lastMessage, readyState } = useWebSocket(
-    `ws://${Api}ws/record/${roomName}/`,
+    `${WebSocketApi}record/${roomName}/`,
   );
 
   const connectionStatus = {
@@ -65,7 +65,7 @@ function VideoChat({ handleEndCall, name }) {
         const id = await JSON.parse(localStorage.getItem('userToken'));
         const bearerToken = await id;
         const response = await axios.get(
-          `http://${Api}api/general/get_video_token/`,
+          `${Api}general/get_video_token/`,
           {
             headers: {
               Authorization: `Bearer ${bearerToken}`,
@@ -191,6 +191,8 @@ function VideoChat({ handleEndCall, name }) {
   const mute = () => {
     participants.forEach((e) => e.videoTracks[0].disable());
   };
+
+  console.log('participants', participants);
 
   return (
     <div className={s.VideoChat}>
