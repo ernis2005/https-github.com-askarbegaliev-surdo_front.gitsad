@@ -22,8 +22,7 @@ export const Svg = () => (
     width="24"
     height="24"
     viewBox="0 0 24 24"
-    fill="none"
-  >
+    fill="none">
     <path
       d="M19.95 21C17.8667 21 15.8083 20.5457 13.775 19.637C11.7417 18.7283 9.89167 17.441 8.225 15.775C6.55833 14.1083 5.271 12.2583 4.363 10.225C3.455 8.19167 3.00067 6.13333 3 4.05C3 3.75 3.1 3.5 3.3 3.3C3.5 3.1 3.75 3 4.05 3H8.1C8.33333 3 8.54167 3.07933 8.725 3.238C8.90833 3.39667 9.01667 3.584 9.05 3.8L9.7 7.3C9.73333 7.56667 9.725 7.79167 9.675 7.975C9.625 8.15833 9.53333 8.31667 9.4 8.45L6.975 10.9C7.30833 11.5167 7.704 12.1123 8.162 12.687C8.62 13.2617 9.12433 13.816 9.675 14.35C10.1917 14.8667 10.7333 15.346 11.3 15.788C11.8667 16.23 12.4667 16.634 13.1 17L15.45 14.65C15.6 14.5 15.796 14.3873 16.038 14.312C16.28 14.2367 16.5173 14.216 16.75 14.25L20.2 14.95C20.4333 15.0167 20.625 15.1377 20.775 15.313C20.925 15.4883 21 15.684 21 15.9V19.95C21 20.25 20.9 20.5 20.7 20.7C20.5 20.9 20.25 21 19.95 21Z"
       fill="white"
@@ -40,17 +39,32 @@ export const VideoChatUser = () => {
   const [isAudio, setIsAudio] = React.useState(true);
   const [userFullName, setUserFullName] = React.useState();
   const [userFullNameOP, setUserFullNameOp] = React.useState();
-  const [participantCamEnabled, setParticipantCamEnabled] = React.useState(true);
+  const [participantCamEnabled, setParticipantCamEnabled] =
+    React.useState(true);
   const [callId, setCallid] = React.useState(null);
-  const [participantMicEnabled, setParticipantMicEnabled] = React.useState(true);
+  const [participantMicEnabled, setParticipantMicEnabled] =
+    React.useState(true);
   const [Chat_id, setChat_id] = React.useState();
 
   const [isCamera, setIsCamera] = React.useState(true);
-  const [isModule, setIsModule] = React.useState(false);
 
   const { userInfo } = useSelector((state) => state.auth);
   const [time, setTime] = React.useState(0);
-
+  const Error = async (name) => {
+    await toast(`${name}`, {
+      position: 'bottom-center',
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'dark',
+    });
+    setTimeout(() => {
+      window.location.href = '/';
+    }, 1000);
+  };
   React.useEffect(() => {
     const localStorages = localStorage;
     const returnFormData = JSON.parse(localStorages.getItem('userToken'));
@@ -68,17 +82,17 @@ export const VideoChatUser = () => {
         setChat_id(chat_id);
 
         setCallid(call_info_id);
-        setUserFullNameOp(full_name)
+        setUserFullNameOp(full_name);
         const newRoom = await Video.connect(token, {
           name: ' my-Cha',
-          //  response.data.room,
+
           audio: true,
           video: { width: 400 },
         }).catch((e) => console.log('video connect err', e));
-        //${response.data.uliid}
+
         setRoom(newRoom);
       } catch (error) {
-        alert(error);
+        Error('Операторы сейчас не в сети.');
       }
     };
     connectToRoom();
@@ -113,11 +127,7 @@ export const VideoChatUser = () => {
 
   const handleEndCall = () => {
     sendMessage(JSON.stringify({ type: 'disable', call_info_id: callId }));
-
-    // room.disconnect();
     window.location.href('/');
-
-    // redirect('/');
   };
 
   const participantConnected = (participant) => {
@@ -195,48 +205,25 @@ export const VideoChatUser = () => {
 
   React.useEffect(() => {
     if (lastMessage !== null) {
-  
       try {
         const data = JSON.parse(lastMessage.data);
 
         const type = data.type;
         setLastMessageData(data);
-    
-        setUserFullName(data.user_full_name)
+
+        setUserFullName(data.user_full_name);
         if (type === 'answering') {
           setIsCalling(false);
           setIsInCall(true);
-     
         } else if (type === 'disable') {
-          toast('Звонок завершён', {
-            position: 'bottom-center',
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'dark',
-          });
           setIsInCall(false);
           setIsCalling(false);
-          window.location.href = '/';
 
+          Error('звонок завершен');
         } else if (type === 'decline') {
-          toast('Звонок завершён', {
-            position: 'bottom-center',
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'dark',
-          });
           setIsInCall(false);
           setIsCalling(false);
-          window.location.href = '/';
-
+          Error('оператор отклонил звонок ');
         }
       } catch (e) {
         console.log(e);
@@ -305,7 +292,6 @@ export const VideoChatUser = () => {
                     height={''}
                     isMicMuted={!participantMicEnabled}
                     isVideoEnabled={!participantCamEnabled}
-
                     name={userFullNameOP}
                   />
                 </div>

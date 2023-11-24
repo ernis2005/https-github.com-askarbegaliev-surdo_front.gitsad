@@ -21,7 +21,18 @@ const TestJS = () => {
   const { userInfo } = useSelector((state) => state.auth)
 
   const userId = userInfo?.id
-  
+  const Error = (name) => {
+    toast((`${name} `), {
+      position: "bottom-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    })
+  }
    
   const { sendMessage, lastMessage, readyState } = useWebSocket(`ws://185.251.88.75:8000/ws/room/${userId}/`);
 
@@ -70,42 +81,20 @@ const TestJS = () => {
    
         setLastMessageData(data)
         if (type === 'calling') {
-          const userName = data.name
-          const userImage = data.image
+          
           setCallid(data.call_info_id)
      
           setIsCalling(true)
         } else if (type === 'disable') {
           if (!isInCall && !isCalling) return
-          
-          toast(("Звонок завершён"), {
-            position: "bottom-center",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-          
-          location.reload()
+          Error('Клиент завершил звонок')
+          setTimeout(() => {  location.reload() }, 1500)
+      
           setIsCalling(false)
           setIsInCall(false)
         } else if (type === 'decline') {
           if (!isCalling) return
-
-          toast(("Звонок завершён"), {
-            position: "bottom-center",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
-
+          Error(' Клиент отклонил звонок')
           setIsCalling(false)
           setIsInCall(false)
         } else if (type === 'answering') {
