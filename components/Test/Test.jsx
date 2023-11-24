@@ -24,7 +24,7 @@ const TestJS = () => {
   
    
   const { sendMessage, lastMessage, readyState } = useWebSocket(`ws://185.251.88.75:8000/ws/room/${userId}/`);
-  console.log(`ws://185.251.88.75:8000/ws/room/${userId}/`);
+
   const [isCalling, setIsCalling] = useState(false)
   const [isInCall, setIsInCall] = useState(false)
   const [callId, setCallid] = useState(null)
@@ -39,9 +39,6 @@ const TestJS = () => {
     [ReadyState.CLOSED]: 'Closed',
     [ReadyState.UNINSTANTIATED]: 'Uninstantiated',
   }[readyState];
-
-  console.log(userId, 'userId users ');
-  console.log('connection status', connectionStatus[readyState], readyState, lastMessage);
 
   const handleNotification = () => {
     if (!("Notification" in window)) {
@@ -98,7 +95,6 @@ const TestJS = () => {
         } else if (type === 'decline') {
           if (!isCalling) return
 
-          console.log('decline', );
           toast(("Звонок завершён"), {
             position: "bottom-center",
             autoClose: 1000,

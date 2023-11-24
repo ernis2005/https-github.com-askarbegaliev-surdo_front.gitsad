@@ -32,7 +32,7 @@ export  function useScreenRecorder() {
                 const videoURL = URL.createObjectURL(blob);
                 // Здесь вы можете использовать videoURL для проигрывания видео на странице или выполнения других действий
 
-                console.log('stop', videoURL)
+            
             };
 
             getVideoChunksAndSend()
@@ -45,7 +45,7 @@ export  function useScreenRecorder() {
     };
 
     const stopRecording = () => {
-        console.log('stopRecording')
+        
         mediaRecorderRef.current?.stop();
         setMediaStream(null);
         setRecording(false);
@@ -54,6 +54,7 @@ export  function useScreenRecorder() {
 
         setData(null)
     };
+    
 
     const getVideoChunksAndSend = () => {
         setTimeout(function () {

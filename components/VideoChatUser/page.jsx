@@ -66,8 +66,7 @@ export const VideoChatUser = () => {
         );
         const { token, chat_id, call_info_id, full_name } = await response.data;
         setChat_id(chat_id);
-        console.log(response.data, 'response.data');
-        console.log(call_info_id, 'chat_id');
+
         setCallid(call_info_id);
         setUserFullNameOp(full_name)
         const newRoom = await Video.connect(token, {
@@ -196,18 +195,18 @@ export const VideoChatUser = () => {
 
   React.useEffect(() => {
     if (lastMessage !== null) {
-      console.log(lastMessage, 'lastMessage');
+  
       try {
         const data = JSON.parse(lastMessage.data);
 
         const type = data.type;
         setLastMessageData(data);
-        console.log(data, 'data');
+    
         setUserFullName(data.user_full_name)
         if (type === 'answering') {
           setIsCalling(false);
           setIsInCall(true);
-          console.log('answering');
+     
         } else if (type === 'disable') {
           toast('Звонок завершён', {
             position: 'bottom-center',
