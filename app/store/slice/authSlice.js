@@ -2,8 +2,9 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { handleModal } from './modalSlice';
+import { Api } from '@/components/api';
 
-const backendURL = 'http://185.251.88.75/api/';
+const backendURL = Api;
 const initialState = {
   loading: false,
   userInfo: null,

@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { userProfile } from './authSlice';
-const backendURL = 'http://185.251.88.75/api/';
+import { Api } from '@/components/api';
+const backendURL = Api;
 
 export const updateDate = createAsyncThunk(
   'users/update_user',

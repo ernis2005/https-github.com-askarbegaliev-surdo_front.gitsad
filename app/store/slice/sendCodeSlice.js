@@ -3,7 +3,8 @@ import axios from 'axios';
 import { handleModal, handleTabClick } from './modalSlice';
 import { confirmationFetch } from './confirmationSlice';
 import { userProfile } from './authSlice';
-const backendURL = 'http://185.251.88.75/api/';
+import { Api } from '@/components/api';
+const backendURL = Api;
 
 export const sendCodeFitch = createAsyncThunk(
   'users/send_code_phone',

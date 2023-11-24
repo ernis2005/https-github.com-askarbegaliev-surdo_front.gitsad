@@ -72,7 +72,7 @@ export const VideoChatUser = () => {
     const connectToRoom = async () => {
       try {
         const response = await axios.get(
-          'http://185.251.88.75/api/general/get_video_token/',
+          `http://${Api}api/general/get_video_token/`,
           {
             headers: {
               Authorization: `Bearer ${returnFormData}`,
@@ -106,7 +106,7 @@ export const VideoChatUser = () => {
   }, []);
 
   const { sendMessage, lastMessage, readyState } = useWebSocket(
-    `ws://185.251.88.75:8000/ws/room/${Chat_id}/`,
+    `ws://${Api}ws/room/${Chat_id}/`,
   );
 
   React.useEffect(() => {
@@ -263,16 +263,38 @@ export const VideoChatUser = () => {
                   />
                 ) : null}
               </div>
-              <h2>{opertorData?.full_name}</h2>
+            <div className={s.infoOp}>
+            <h2>{opertorData?.full_name}</h2>
+            <p>Соединение..  </p>
+            </div>
+             
             </span>
-            <div className={s.buttons}>
-              <button onClick={() => redirectPage()} className={s.Reject}>
+            <div className={s.buttons1}>
+            <div>
+              <button onClick={handleVideoEnabledStatus} className={s.isCamera}>
+                <div className={s.span}>
+                  {isCamera === true ? (
+                    <BsCameraVideo />
+                  ) : (
+                    <BsCameraVideoOff />
+                  )}
+                </div>
+               
+              </button>
+              <button onClick={handleAudioEnabledStatus} className={s.isCamera}>
+                <div className={s.span}>
+                  {isAudio === true ? <BiMicrophone /> : <BiMicrophoneOff />}
+                </div>
+                
+              </button>
+              <button onClick={() => handleEndCall()} className={s.isReject}>
                 <div className={s.span}>
                   <Svg />
                 </div>
-                <p> Отклонить</p>
+             
               </button>
             </div>
+          </div>
           </div>
         </div>
       )}

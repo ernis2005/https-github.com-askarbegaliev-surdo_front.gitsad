@@ -364,7 +364,7 @@ export default async function Home() {
                         <h4>Google play</h4>
                       </div>
                     </Link>
-                    <Link className={s.Item} href="#">
+                    <Link className={s.Item} target="_blank" href="https://apps.apple.com/us/app/surdokg/id6471242557">
                       <svg
                         className={s.logo}
                         xmlns="http://www.w3.org/2000/svg"

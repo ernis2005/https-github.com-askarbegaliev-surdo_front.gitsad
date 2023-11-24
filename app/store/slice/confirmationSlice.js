@@ -3,8 +3,9 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { handleModal, handleTabClick } from './modalSlice';
 import { userProfile } from './authSlice';
+import { Api } from '@/components/api';
 
-const backendURL = 'http://185.251.88.75/api/';
+const backendURL = Api;
 
 export const confirmationFetch = createAsyncThunk(
   'users/phone_verify',

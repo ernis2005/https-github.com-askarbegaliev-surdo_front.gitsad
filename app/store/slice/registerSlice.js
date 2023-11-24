@@ -1,8 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { handleTabClick } from './modalSlice';
+import { Api } from '@/components/api';
 
-const backendURL = 'http://185.251.88.75/api/';
+const backendURL =Api;
 
 export const registerUser = createAsyncThunk(
   'users/register',

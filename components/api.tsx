@@ -1,0 +1,1 @@
+export  const Api = 'https://apteka-kassa.site/api/'

@@ -1,6 +1,7 @@
+import { Api } from '@/components/api';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-const backendURL = 'http://185.251.88.75/api/';
+const backendURL =Api;
 
 export const historyData = createAsyncThunk(
   'general/api/video_call_history',

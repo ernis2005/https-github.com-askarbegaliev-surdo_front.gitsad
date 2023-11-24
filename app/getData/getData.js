@@ -1,6 +1,8 @@
+import { Api } from '@/components/api';
 import axios from 'axios';
 
-const backendURL = 'http://185.251.88.75/api/';
+const backendURL = Api
+;
 
 export const fetchNews = async () => {
   try {

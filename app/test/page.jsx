@@ -8,7 +8,7 @@ import { redirect, useRouter } from 'next/navigation';
 import VideoChat from '@/components/VideoChat/VideoChat';
 import Image from 'next/image';
 import { useSelector } from 'react-redux';
-
+import { Api } from '@/components/api';
 
 const Svg = () => (
   <svg className='text-white' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -18,8 +18,8 @@ const Svg = () => (
 const page = () => {
   const  {userInfo} = useSelector((state)=> state.auth )
 
-  const userId = userInfo?.id
-  const { sendMessage, lastMessage, readyState } = useWebSocket(`ws://185.251.88.75:8000/ws/room/${userId}/`);
+  const userId = userInfo?.id8000
+  const { sendMessage, lastMessage, readyState } = useWebSocket(`ws://${Api}/ws/room/${userId}/`);
   const [isCalling, setIsCalling] = useState(false)
   const [isInCall, setIsInCall] = useState(false)
   const [callId, setCallid] = useState(null)
