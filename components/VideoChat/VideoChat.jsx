@@ -47,7 +47,7 @@ function VideoChat({ handleEndCall, name }) {
 
   const roomName = room?.name;
   const { sendMessage, lastMessage, readyState } = useWebSocket(
-    `ws://${Api}/ws/record/${roomName}/`,
+    `ws://${Api}ws/record/${roomName}/`,
   );
 
   const connectionStatus = {

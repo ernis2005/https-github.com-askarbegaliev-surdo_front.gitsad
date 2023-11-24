@@ -35,7 +35,7 @@ const TestJS = () => {
     })
   }
    
-  const { sendMessage, lastMessage, readyState } = useWebSocket(`ws://${Api}/ws/room/${userId}/`);
+  const { sendMessage, lastMessage, readyState } = useWebSocket(`ws://${Api}ws/room/${userId}/`);
 
   const [isCalling, setIsCalling] = useState(false)
   const [isInCall, setIsInCall] = useState(false)
