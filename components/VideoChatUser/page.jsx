@@ -15,6 +15,7 @@ import { useSelector } from 'react-redux';
 import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import { toast } from 'react-toastify';
+import { Api } from '../api';
 export const Svg = () => (
   <svg
     className="text-white"
