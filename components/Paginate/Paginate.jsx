@@ -21,7 +21,6 @@ export default function Paginate({ newsData }) {
 
   const prev = () => {
     if (currentPage !== 1) {
-   
       setCurrentPage(currentPage - 1);
     }
   };

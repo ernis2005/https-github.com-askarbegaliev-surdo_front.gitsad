@@ -37,8 +37,8 @@ export default function ConfirSendCode() {
           <span>Потверждение номера телефона</span>
         </button>
         <p>
-          `На ваш номер ${phone} был отправлен код. Он нужен для потверждения
-          вашей личности`
+          {`На ваш номер ${phone} был отправлен код. Он нужен для потверждения
+          вашей личности`}
         </p>
         <div className={s.cont}>
           <div className={s.contai}>
@@ -53,6 +53,10 @@ export default function ConfirSendCode() {
         {error && (
           <p style={{ color: 'red', textAlign: 'start' }}>{error.error}</p>
         )}
+        <p>
+          Запросить повторно через <span>01:22</span>
+        </p>
+        <button className={s.btn}>Запросить повторно</button>
 
         <button onClick={confirmationClickSend} className={s.button}>
           <span>{loading ? <Spiner /> : 'Изменить пароль'}</span>
