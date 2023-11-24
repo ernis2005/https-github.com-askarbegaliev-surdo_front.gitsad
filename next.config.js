@@ -8,7 +8,7 @@ const nextConfig = {
     
     return 'my-build-id'
   },
-  distDir: 'build',
+  
 };
 
 module.exports = nextConfig;
