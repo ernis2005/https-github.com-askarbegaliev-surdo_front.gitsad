@@ -43,13 +43,11 @@ function VideoChat({ handleEndCall, name }) {
   const { startScreenRecording, stopScreenRecording, recordedData } =
     useScreenRecorder();
 
- console.log('resrse');
   const roomName = room?.name;
   const { sendMessage, lastMessage, readyState } = useWebSocket(
     `ws://185.251.88.75:8000/ws/record/${roomName}/`,
   );
 
-   console.log('lastMessage', lastMessage);
   const connectionStatus = {
     [ReadyState.CONNECTING]: 'Connecting',
     [ReadyState.OPEN]: 'Open',
@@ -88,7 +86,7 @@ function VideoChat({ handleEndCall, name }) {
     };
     connectToRoom();
     return () => {
-      console.log('disconnect');
+   
       stopScreenRecording();
       if (room) {
         room.disconnect();
