@@ -33,6 +33,16 @@
       font-size: 12px;
       width: 310px;
     }
+
+    span {
+      color: #000;
+      text-align: center;
+      font-family: 'Ubuntu-Bold';
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
   }
 
   .cont {
@@ -71,6 +81,15 @@
         margin-right: 0px;
       }
     }
+  }
+
+  .btn {
+    color: #0051c7;
+    font-family: 'Ubuntu-Medium';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 
   .button {

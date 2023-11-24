@@ -60,7 +60,6 @@ export default function Register() {
           <div className={s.wrapper}>
             <label htmlFor="tel">Номер телефона</label>
             <InputMask
-              type="tel"
               {...register('phone', {
                 required: 'Поле обязателно к заполнина',
               })}
@@ -68,6 +67,9 @@ export default function Register() {
               mask="+996 (___) ___-___"
               placeholder="+996"
               replacement={{ _: /\d/ }}
+              formatCharacters={{
+                9: '[0-9]',
+              }}
             />
             {errors && <p style={{ color: 'red' }}>{errors?.phone?.message}</p>}
           </div>
