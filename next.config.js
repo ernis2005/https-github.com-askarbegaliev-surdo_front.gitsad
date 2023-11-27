@@ -5,7 +5,6 @@ const nextConfig = {
     domains: ['185.251.88.75','apteka-kassa.site'],
   },
   generateBuildId: async () => {
-    
     return 'my-build-id'
   },
   

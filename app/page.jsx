@@ -15,7 +15,7 @@ import Appstore from '../public/imgs/appstore.png';
 import { MdLocalPhone } from 'react-icons/md';
 import { fetchNews, fetchQuintion } from './getData/getData';
 import LinkPhone from '../components/LinkPhone/LinkPhone';
-//test
+
 const data = [
   {
     id: 1,

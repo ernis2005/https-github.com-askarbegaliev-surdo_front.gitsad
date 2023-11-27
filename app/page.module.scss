@@ -1,11 +1,14 @@
 .Hero {
   padding: 75px 0 140px;
+
   @media screen and (max-width: 1000px) {
     padding: 75px 0 70px;
   }
+
   @media screen and (max-width: 600px) {
     padding: 40px 0;
   }
+
   .link {
     position: fixed;
     top: 300px;
@@ -15,27 +18,34 @@
     background: var(--blue, #0051c7);
     box-shadow: 0px 0px 10px 0px rgba(67, 67, 67, 0.1);
     z-index: 5;
+
     @media screen and (max-width: 1440px) {
       right: 30px;
     }
+
     @media screen and (max-width: 1140px) {
       padding: 15px;
     }
+
     @media screen and (max-width: 600px) {
       padding: 10px;
     }
+
     .logo {
       width: 60px;
       height: 60px;
       fill: #fff;
+
       @media screen and (max-width: 1140px) {
         width: 40px;
         height: 40px;
       }
+
       @media screen and (max-width: 1024px) {
         width: 30px;
         height: 30px;
       }
+
       @media screen and (max-width: 600px) {
         width: 20px;
         height: 20px;
@@ -51,16 +61,20 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
     @media screen and (max-width: 1140px) {
       font-size: 80px;
     }
+
     @media screen and (max-width: 1024px) {
       font-size: 60px;
     }
+
     @media screen and (max-width: 600px) {
       font-size: 30px;
     }
   }
+
   .Hero_title {
     p {
       color: #161616;
@@ -71,6 +85,7 @@
       font-weight: 400;
       line-height: 185%;
       margin: 40px 0px 64px;
+
       @media screen and (max-width: 1024px) {
         font-size: 19px;
         margin: 20px 0px;
@@ -105,6 +120,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
+
     @media screen and (max-width: 1140px) {
       gap: 150px;
     }
@@ -113,6 +129,7 @@
       gap: 100px;
       margin-top: 40px;
     }
+
     @media screen and (max-width: 600px) {
       gap: 70px;
       margin-top: 20px;
@@ -127,14 +144,17 @@
       .slide_img {
         width: 60px;
         height: 60px;
+
         @media screen and (max-width: 1140px) {
           width: 50px;
           height: 50px;
         }
+
         @media screen and (max-width: 1024px) {
           width: 40px;
           height: 40px;
         }
+
         @media screen and (max-width: 600px) {
           height: 32px;
           width: 32px;
@@ -148,26 +168,32 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+
         @media screen and (max-width: 1024px) {
           font-size: 26px;
         }
+
         @media screen and (max-width: 600px) {
           font-size: 18px;
         }
       }
     }
   }
+
   .wrapper {
     display: grid;
     grid-template-columns: 5fr 7fr;
     gap: 60px;
     align-items: center;
+
     @media screen and (max-width: 1140px) {
       gap: 30px;
     }
+
     @media screen and (max-width: 1024px) {
       grid-template-columns: 12fr;
     }
+
     @media screen and (max-width: 600px) {
       gap: 20px;
     }
@@ -182,12 +208,15 @@
         grid-template-columns: 6fr 6fr;
         align-items: center;
         gap: 40px;
+
         @media screen and (max-width: 1140px) {
           gap: 20px;
         }
+
         @media screen and (max-width: 1024px) {
           gap: 30px;
         }
+
         @media screen and (max-width: 600px) {
           gap: 10px;
         }
@@ -206,12 +235,15 @@
         justify-content: center;
         align-items: center;
         margin-top: 40px;
+
         @media screen and (max-width: 1140px) {
           margin-top: 20px;
         }
+
         @media screen and (max-width: 1024px) {
           margin-top: 30px;
         }
+
         @media screen and (max-width: 600px) {
           margin-top: 10px;
           height: 150px;
@@ -225,13 +257,16 @@
           font-weight: 700;
           line-height: normal;
           text-transform: uppercase;
+
           @media screen and (max-width: 1140px) {
             font-size: 54px;
           }
+
           @media screen and (max-width: 600px) {
             font-size: 34px;
           }
         }
+
         p {
           color: var(--dark, #161616);
           font-family: 'Ubuntu-Medium';
@@ -240,9 +275,11 @@
           font-weight: 400;
           line-height: normal;
           margin-top: 13px;
+
           @media screen and (max-width: 1140px) {
             font-size: 26px;
           }
+
           @media screen and (max-width: 600px) {
             font-size: 12px;
           }
@@ -262,12 +299,15 @@
         font-style: normal;
         font-weight: 800;
         line-height: normal;
+
         @media screen and (max-width: 1140px) {
           font-size: 52px;
         }
+
         @media screen and (max-width: 1024px) {
           font-size: 44px;
         }
+
         @media screen and (max-width: 600px) {
           font-size: 26px;
         }
@@ -283,14 +323,17 @@
         line-height: 185%;
         opacity: 0.8;
         margin: 60px 0 40px;
+
         @media screen and (max-width: 1140px) {
           font-size: 20px;
           margin: 40px 0 40px;
         }
+
         @media screen and (max-width: 1024px) {
           font-size: 20px;
           margin: 30px 0;
         }
+
         @media screen and (max-width: 600px) {
           font-size: 14px;
           margin: 20px 0 10px;
@@ -311,6 +354,7 @@
         display: flex;
         align-items: center;
         gap: 8px;
+
         @media screen and (max-width: 600px) {
           font-size: 18px;
           width: 180px;
@@ -326,6 +370,7 @@
   background-position-x: right;
   background-position-y: bottom;
   background-repeat: no-repeat;
+
   @media screen and (max-width: 1140px) {
     background-size: contain;
   }
@@ -333,27 +378,35 @@
   @media screen and (max-width: 1024px) {
     background-image: none;
   }
+
   .service {
     margin: 140px 0;
+
     @media screen and (max-width: 1140px) {
       margin: 100px 0;
     }
+
     @media screen and (max-width: 1024px) {
       margin: 80px 0;
     }
+
     @media screen and (max-width: 600px) {
       margin: 40px 0;
     }
+
     .title {
       display: grid;
       grid-template-columns: 4fr 8fr;
       gap: 100px;
+
       @media screen and (max-width: 1140px) {
         gap: 50px;
       }
+
       @media screen and (max-width: 1024px) {
         gap: 28px;
       }
+
       @media screen and (max-width: 600px) {
         grid-template-columns: 12fr;
         gap: 10px;
@@ -366,16 +419,20 @@
         font-style: normal;
         font-weight: 800;
         line-height: normal;
+
         @media screen and (max-width: 1140px) {
           font-size: 48px;
         }
+
         @media screen and (max-width: 1024px) {
           font-size: 44px;
         }
+
         @media screen and (max-width: 600px) {
           font-size: 26px;
         }
       }
+
       p {
         color: var(--dark, #161616);
         text-align: justify;
@@ -385,9 +442,11 @@
         font-weight: 400;
         line-height: 185%;
         opacity: 0.8;
+
         @media screen and (max-width: 1140px) {
           font-size: 20px;
         }
+
         @media screen and (max-width: 600px) {
           font-size: 12px;
         }
@@ -399,10 +458,12 @@
       grid-template-columns: 4fr 4fr 4fr;
       gap: 77px;
       margin-top: 54px;
+
       @media screen and (max-width: 1140px) {
         gap: 23px;
         margin-top: 30px;
       }
+
       @media screen and (max-width: 600px) {
         grid-template-columns: 12fr;
         gap: 30px;
@@ -419,12 +480,15 @@
       grid-template-columns: 3fr 6fr 3fr;
       gap: 72px;
       align-items: center;
+
       @media screen and (max-width: 1280px) {
         gap: 52px;
       }
+
       @media screen and (max-width: 1140px) {
         gap: 42px;
       }
+
       @media screen and (max-width: 1024px) {
         grid-template-columns: 12fr;
         gap: 30px;
@@ -439,6 +503,7 @@
         @media screen and (max-width: 1140px) {
           gap: 30px;
         }
+
         @media screen and (max-width: 600px) {
           gap: 10px;
         }
@@ -450,26 +515,33 @@
           font-style: normal;
           font-weight: 700;
           line-height: normal;
+
           @media screen and (max-width: 1280px) {
             font-size: 50px;
           }
+
           @media screen and (max-width: 1140px) {
             font-size: 44px;
           }
+
           @media screen and (max-width: 600px) {
             font-size: 26px;
           }
         }
+
         p {
           color: var(--dark, #161616);
           font-family: 'Ubuntu-Medium';
           font-size: 24px;
           font-style: normal;
           font-weight: 400;
-          line-height: 185%; /* 44.4px */
+          line-height: 185%;
+
+          /* 44.4px */
           @media screen and (max-width: 1140px) {
             font-size: 20px;
           }
+
           @media screen and (max-width: 600px) {
             font-size: 12px;
           }
@@ -484,12 +556,15 @@
         width: 100%;
         height: 105%;
         position: relative;
+
         @media screen and (max-width: 1440px) {
           height: 95%;
         }
+
         @media screen and (max-width: 1140px) {
           height: 85%;
         }
+
         @media screen and (max-width: 1024px) {
           display: none;
         }
@@ -503,9 +578,11 @@
           @media screen and (max-width: 1440px) {
             max-width: 750px;
           }
+
           @media screen and (max-width: 1280px) {
             max-width: 650px;
           }
+
           @media screen and (max-width: 1140px) {
             max-width: 550px;
           }
@@ -514,6 +591,7 @@
 
       .mobil {
         display: none;
+
         @media screen and (max-width: 1024px) {
           display: block;
           width: 100%;
@@ -536,6 +614,7 @@
           justify-content: space-between;
           align-items: flex-end;
         }
+
         @media screen and (max-width: 600px) {
           flex-direction: column;
           align-items: flex-start;
@@ -544,14 +623,16 @@
 
         h3 {
           color: var(--dark, #161616);
-          font-family: '' Ubuntu-Medium '';
+          font-family: ''Ubuntu-Medium '';
           font-size: 54px;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
+
           @media screen and (max-width: 1140px) {
             font-size: 44px;
           }
+
           @media screen and (max-width: 600px) {
             font-size: 34px;
           }
@@ -564,12 +645,15 @@
           font-style: normal;
           font-weight: 400;
           line-height: 185%;
+
           @media screen and (max-width: 1140px) {
             font-size: 20px;
           }
+
           @media screen and (max-width: 1024px) {
             width: 300px;
           }
+
           @media screen and (max-width: 600px) {
             font-size: 12px;
             width: none;
@@ -580,14 +664,17 @@
           border-radius: 50%;
           width: 100px;
           height: 100px;
+
           @media screen and (max-width: 1140px) {
             width: 70px;
             height: 70px;
           }
+
           @media screen and (max-width: 1024px) {
             width: 100px;
             height: 100px;
           }
+
           @media screen and (max-width: 600px) {
             width: 60px;
             height: 60px;
@@ -603,14 +690,17 @@
           border-radius: 50%;
           background-color: #d9d9d9;
           z-index: 2;
+
           @media screen and (max-width: 1140px) {
             height: 70px;
             width: 70px;
           }
+
           @media screen and (max-width: 1024px) {
             height: 100px;
             width: 100px;
           }
+
           @media screen and (max-width: 600px) {
             height: 60px;
             width: 60px;
@@ -618,11 +708,12 @@
 
           span {
             color: var(--dark, #1c1c1c);
-            font-family: '' Ubuntu-Medium '';
+            font-family: ''Ubuntu-Medium '';
             font-size: 36px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+
             @media screen and (max-width: 1140px) {
               font-size: 26px;
             }
@@ -630,6 +721,7 @@
             @media screen and (max-width: 1024px) {
               font-size: 36px;
             }
+
             @media screen and (max-width: 600px) {
               font-size: 20px;
             }
@@ -640,6 +732,7 @@
           display: flex;
           flex-direction: column;
           gap: 30px;
+
           @media screen and (max-width: 600px) {
             flex-direction: row;
           }
@@ -651,20 +744,25 @@
             padding: 20px 29px;
             border-radius: 14.333px;
             background: var(--dark, #161616);
+
             @media screen and (max-width: 1140px) {
               padding: 20px 25px;
             }
+
             @media screen and (max-width: 1024px) {
               padding: 10px 20px;
             }
+
             @media screen and (max-width: 600px) {
               padding: 7px 15px;
               gap: 8px;
-              border-radius: 10px; 
+              border-radius: 10px;
             }
+
             .logo {
               width: 45.867px;
               height: 45.867px;
+
               @media screen and (max-width: 600px) {
                 width: 24px;
                 height: 24px;
@@ -682,17 +780,7 @@
             //     font-size: 8px;
             //   }
             // }
-            p{
-              color: var(--white, #FFF);
-font-family: Gilroy-SemiBold;
-font-size: 11.467px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-color: #FFF;
-text-transform: uppercase;
-            }
-            span{
+            p {
               color: var(--white, #FFF);
               font-family: Gilroy-SemiBold;
               font-size: 11.467px;
@@ -701,10 +789,23 @@ text-transform: uppercase;
               line-height: normal;
               color: #FFF;
               text-transform: uppercase;
-                @media screen and (max-width: 600px) {
+            }
+
+            span {
+              color: var(--white, #FFF);
+              font-family: Gilroy-SemiBold;
+              font-size: 11.467px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              color: #FFF;
+              text-transform: uppercase;
+
+              @media screen and (max-width: 600px) {
                 font-size: 8px;
               }
             }
+
             h4 {
               color: var(--white, #fff);
               font-family: 'Ubuntu-Bold';
@@ -713,9 +814,11 @@ text-transform: uppercase;
               font-weight: 700;
               line-height: 0.8;
               padding: 10px 0px;
+
               @media screen and (max-width: 1140px) {
                 font-size: 24px;
               }
+
               @media screen and (max-width: 600px) {
                 font-size: 16px;
               }
@@ -729,12 +832,15 @@ text-transform: uppercase;
 
 .blog_news {
   margin: 100px 0 140px;
+
   @media screen and (max-width: 1140px) {
     margin: 60px 0 100px;
   }
+
   @media screen and (max-width: 1000px) {
     margin: 40px 0 80px;
   }
+
   @media screen and (max-width: 600px) {
     margin: 0px 0 40px;
   }
@@ -758,16 +864,20 @@ text-transform: uppercase;
       font-weight: 700;
       line-height: normal;
       text-align: center;
+
       @media screen and (max-width: 1140px) {
         font-size: 50px;
       }
+
       @media screen and (max-width: 1024px) {
         font-size: 44px;
       }
+
       @media screen and (max-width: 600px) {
         font-size: 26px;
       }
     }
+
     p {
       color: var(--dark, #161616);
       text-align: center;
@@ -778,9 +888,11 @@ text-transform: uppercase;
       line-height: 185%;
       opacity: 0.7;
       margin-top: 20px;
+
       @media screen and (max-width: 1140px) {
         font-size: 18px;
       }
+
       @media screen and (max-width: 600px) {
         font-size: 12px;
         margin-top: 10px;
@@ -791,9 +903,11 @@ text-transform: uppercase;
       display: flex;
       margin-top: 40px;
       gap: 60px;
+
       @media screen and (max-width: 1140px) {
         gap: 40px;
       }
+
       @media screen and (max-width: 1024px) {
         scroll-behavior: auto;
         overflow-y: auto;
@@ -802,10 +916,12 @@ text-transform: uppercase;
         scrollbar-width: none;
         padding: 0 30px;
         margin-top: 30px;
+
         &::-webkit-scrollbar {
           display: none;
         }
       }
+
       @media screen and (max-width: 600px) {
         gap: 10px;
         margin-top: 20px;
@@ -816,10 +932,12 @@ text-transform: uppercase;
 
   .accordion {
     margin-top: 140px;
+
     @media screen and (max-width: 1024px) {
       padding: 30px;
       margin-top: 80px;
     }
+
     @media screen and (max-width: 600px) {
       margin-top: 40px;
       padding: 20px;
@@ -834,13 +952,16 @@ text-transform: uppercase;
         font-weight: 700;
         line-height: normal;
         opacity: 0.7;
+
         @media screen and (max-width: 1024px) {
           font-size: 44px;
         }
+
         @media screen and (max-width: 600px) {
           font-size: 26px;
         }
       }
+
       h3 {
         color: var(--dark, #161616);
         font-family: 'Ubuntu-Bold';
@@ -848,13 +969,16 @@ text-transform: uppercase;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+
         @media screen and (max-width: 1024px) {
           font-size: 44px;
         }
+
         @media screen and (max-width: 600px) {
           font-size: 26px;
         }
       }
+
       p {
         color: var(--dark, #161616);
         font-family: 'Ubuntu-Medium';
@@ -863,10 +987,12 @@ text-transform: uppercase;
         font-weight: 400;
         line-height: 185%;
         margin: 20px 0 40px;
+
         @media screen and (max-width: 1024px) {
           font-size: 18px;
           margin: 10px 0 20px;
         }
+
         @media screen and (max-width: 600px) {
           font-size: 12px;
           margin: 5px 0 20px;
@@ -879,14 +1005,16 @@ text-transform: uppercase;
       grid-template-columns: 6fr 6fr;
       row-gap: 20px;
       column-gap: 40px;
+
       @media screen and (max-width: 1024px) {
         grid-template-columns: 12fr;
       }
+
       @media screen and (max-width: 600px) {
         gap: 10px;
       }
     }
   }
 }
-.tes {
-}
+
+.tes {}
